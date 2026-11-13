@@ -34,4 +34,9 @@ return [
     'prompt_version' => env('AI_PROMPT_VERSION', 'v1'),
     'ai_provider' => env('AI_PROVIDER', 'gemini'),
     'ai_model' => env('AI_MODEL', 'gemini-3.1-flash-lite'),
+    'ai_timeout' => (int) env('AI_TIMEOUT', 60),
+    'ai_rate_limit_per_minute' => (int) env('AI_RATE_LIMIT_PER_MINUTE', 10),
+    'ai_simulate_failure_rate' => (float) env('AI_SIMULATE_FAILURE_RATE', 0),
+    'grouping_chunk_size' => 60,
+    'anchor_examples' => 3,
 ];

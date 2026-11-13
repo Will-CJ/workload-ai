@@ -32,5 +32,6 @@ return [
     ],
 
     'prompt_version' => env('AI_PROMPT_VERSION', 'v1'),
-
+    'ai_provider' => env('AI_PROVIDER', 'gemini'),
+    'ai_model' => env('AI_MODEL', 'gemini-3.1-flash-lite'),
 ];

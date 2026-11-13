@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->string('employee_code', 20)->unique();   // EMP-001 dari Excel
+            $table->string('name', 150);
+            $table->foreignId('department_id')->constrained()->restrictOnDelete();
             $table->timestamps();
         });
     }

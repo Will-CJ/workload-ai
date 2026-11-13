@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('import_batches', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('original_name');
+            $table->string('stored_path')->nullable();
+            $table->unsignedInteger('total_rows')->default(0);
+            $table->unsignedInteger('success_rows')->default(0);
+            $table->unsignedInteger('failed_rows')->default(0);
+            $table->json('errors')->nullable();
+            $table->string('status', 30)->default('pending')->index();
             $table->timestamps();
         });
     }

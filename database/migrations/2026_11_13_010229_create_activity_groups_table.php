@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('activity_groups', function (Blueprint $table) {
             $table->id();
+            $table->string('code', 50)->unique();
+            $table->string('label', 100);
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@
                     <flux:sidebar.item icon="queue-list" :href="route('activities')" :current="request()->routeIs('activities')" wire:navigate>Aktivitas</flux:navlist.item>
                     <flux:sidebar.item icon="rectangle-group" :href="route('groups')" :current="request()->routeIs('groups')" wire:navigate>Grouping</flux:navlist.item>
                     <flux:sidebar.item icon="building-office-2" :href="route('departments.index')" :current="request()->routeIs('departments.*', 'employees.*')" wire:navigate>Departemen & Karyawan</flux:navlist.item>
+                    <flux:sidebar.item icon="document-arrow-down" :href="route('reports')" :current="request()->routeIs('reports')" wire:navigate>Laporan & Export</flux:navlist.item>
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 

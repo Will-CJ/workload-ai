@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Activity;
 use App\Models\AiAnalysis;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
 class WorkloadStatus extends Command
 {
@@ -25,6 +26,12 @@ class WorkloadStatus extends Command
         AiAnalysis::failed()->limit(10)->get()->each(
             fn (AiAnalysis $a) => $this->warn("#{$a->id}: {$a->error}")
         );
+
+        $this->newLine();
+        $this->info('Ringkasan AI:');
+        $this->table(['Status', 'Jumlah'], DB::table('ai_summaries')
+        ->selectRaw('status, count(*) as total')->groupBy('status')->get()
+        ->map(fn ($r) => [$r->status, $r->total])->all());
 
         return self::SUCCESS;
     }

@@ -15,6 +15,10 @@ class AnalyzeWorkload extends Command
     public function handle(AnalysisPipeline $pipeline): int
     {
         if (Activity::count() === 0) {
+            if (! $this->option('force') && $pipeline->isRunning()) {
+                $this->warn('Analisis masih berjalan. Tunggu selesai (cek: php artisan workload:status).');
+                return self::FAILURE;
+            }
             $this->error('Belum ada data. Jalankan workload:import dulu.');
 
             return self::FAILURE;

@@ -47,4 +47,40 @@ class AiOutputValidator
 
         return $map;
     }
+
+        /** @return list<string> */
+    public function summary(array $output): array
+    {
+        $errors = [];
+        $length = mb_strlen(trim((string) ($output['summary'] ?? '')));
+
+        if ($length < 50) {
+            $errors[] = 'summary kosong atau terlalu pendek';
+        } elseif ($length > 3000) {
+            $errors[] = 'summary terlalu panjang';
+        }
+
+        if (! is_array($output['priority_rationales'] ?? null)) {
+            $errors[] = 'priority_rationales harus berupa array';
+        }
+
+        return $errors;
+    }
+
+    /** @return array<string, string> activity_id => rationale (hanya id yang ada di daftar prioritas) */
+    public function rationales(array $items, array $validIds): array
+    {
+        $map = [];
+
+        foreach ($items as $item) {
+            $id = (string) ($item['activity_id'] ?? '');
+            $text = trim((string) ($item['rationale'] ?? ''));
+
+            if (in_array($id, $validIds, true) && $text !== '') {
+                $map[$id] = $text;
+            }
+        }
+
+        return $map;
+    }
 }

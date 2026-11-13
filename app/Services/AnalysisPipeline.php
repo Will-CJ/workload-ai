@@ -10,12 +10,14 @@ use App\Models\ActivityGroup;
 use App\Models\AiAnalysis;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
 class AnalysisPipeline
 {
     public function __construct(
         private TextNormalizer $normalizer,
         private FteCalculator $calculator,
+        private SummaryService $summaries,
     ) {}
 
     /**
@@ -53,6 +55,8 @@ class AnalysisPipeline
         if ($pendingIds !== []) {
             AiAnalysis::whereIn('id', $pendingIds)->update(['status' => AnalysisStatus::Pending->value, 'error' => null]);
             GroupActivitiesJob::dispatch($pendingIds);
+        } else {
+            $this->summaries->dispatchAll(); // semua dari cache -> langsung buat ringkasan
         }
 
         return [
@@ -72,9 +76,12 @@ class AnalysisPipeline
         $jobs = array_map(fn (int $id) => new AnalyzeActivityJob($id), $analysisIds);
 
         $batch = Bus::batch($jobs)
-            ->name('workload-analysis')
-            ->allowFailures()   // satu gagal tidak membatalkan yang lain
-            ->dispatch();
+        ->name('workload-analysis')
+        ->allowFailures()
+        ->finally(static function () {
+            app(SummaryService::class)->dispatchAll(); 
+        })
+        ->dispatch();
 
         Cache::put('workload:analysis_batch_id', $batch->id, now()->addDay());
     }
@@ -137,5 +144,11 @@ class AnalysisPipeline
                 ]);
             }
         });
+    }
+    
+    public function isRunning(): bool
+    {
+        return AiAnalysis::whereIn('status', [AnalysisStatus::Pending->value, AnalysisStatus::Processing->value])->exists()
+            && DB::table('jobs')->exists();
     }
 }

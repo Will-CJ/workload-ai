@@ -145,10 +145,22 @@ class AnalysisPipeline
             }
         });
     }
-    
+
     public function isRunning(): bool
     {
         return AiAnalysis::whereIn('status', [AnalysisStatus::Pending->value, AnalysisStatus::Processing->value])->exists()
             && DB::table('jobs')->exists();
+    }
+
+    public function statusCounts(): array
+    {
+        $counts = DB::table('ai_analyses')
+            ->whereIn('content_hash', Activity::query()->select('content_hash'))
+            ->selectRaw('status, count(*) as total')
+            ->groupBy('status')
+            ->pluck('total', 'status')
+            ->all();
+
+        return array_map('intval', $counts + ['pending' => 0, 'processing' => 0, 'success' => 0, 'failed' => 0]);
     }
 }

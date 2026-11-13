@@ -12,9 +12,11 @@
 
             <flux:sidebar.nav>
                 <flux:sidebar.group :heading="__('Platform')" class="grid">
-                    <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
-                        {{ __('Dashboard') }}
-                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>Dashboard</flux:navlist.item>
+                    <flux:sidebar.item icon="arrow-up-tray" :href="route('import')" :current="request()->routeIs('import')" wire:navigate>Import & Analisis</flux:navlist.item>
+                    <flux:sidebar.item icon="queue-list" :href="route('activities')" :current="request()->routeIs('activities')" wire:navigate>Aktivitas</flux:navlist.item>
+                    <flux:sidebar.item icon="rectangle-group" :href="route('groups')" :current="request()->routeIs('groups')" wire:navigate>Grouping</flux:navlist.item>
+                    <flux:sidebar.item icon="building-office-2" :href="route('departments.index')" :current="request()->routeIs('departments.*', 'employees.*')" wire:navigate>Departemen & Karyawan</flux:navlist.item>
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 

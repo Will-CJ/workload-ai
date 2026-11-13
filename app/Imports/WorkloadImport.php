@@ -67,6 +67,8 @@ class WorkloadImport implements ToCollection, WithHeadingRow
             $activityId = $data['activity_id'];
             if ($activityId !== null && isset($seen[$activityId])) {
                 $messages[] = "activity_id {$activityId} duplikat dengan baris {$seen[$activityId]}.";
+            } elseif ($activityId !== null) {
+                $seen[$activityId] = $line; // catat semua ID, valid maupun tidak
             }
 
             if ($messages !== []) {
@@ -75,7 +77,6 @@ class WorkloadImport implements ToCollection, WithHeadingRow
                 continue;
             }
 
-            $seen[$activityId] = $line;
             $this->persist($data);
             $this->successRows++;
         }

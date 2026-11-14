@@ -55,6 +55,9 @@ it('command menulis results.json', function () {
 
     $this->artisan('workload:export-results', ['--path' => $path])->assertSuccessful();
 
-    expect(json_decode(file_get_contents(base_path($path)), true))->toHaveCount(60);
+    $json = json_decode(file_get_contents(base_path($path)), true);
+
+    expect($json)->toHaveKey('activities')
+        ->and($json['activities'])->toHaveCount(60);
     unlink(base_path($path));
 });

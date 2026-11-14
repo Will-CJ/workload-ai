@@ -34,7 +34,7 @@ class ResultsExporter
     public function toJson(): string
     {
         return json_encode(
-            $this->results(),
+            ['activities' => $this->results()],
             JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRESERVE_ZERO_FRACTION,
         );
     }

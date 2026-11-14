@@ -1,0 +1,604 @@
+{
+    "activities": [
+        {
+            "activity_id": "ACT-0001",
+            "automation_level": "high",
+            "reason": "Aktivitas input data invoice ke sistem adalah pekerjaan administratif yang berulang, memiliki aturan validasi data yang jelas, serta menggunakan format input dan output yang terstruktur.",
+            "recommendation": "Gunakan teknologi Intelligent Document Processing (IDP) dengan OCR untuk mengekstrak data dari dokumen invoice secara otomatis, kemudian integrasikan hasilnya ke modul Account Payable SAP menggunakan Robotic Process Automation (RPA).",
+            "group_id": "manual_data_entry",
+            "fte": 0.1458,
+            "estimated_fte_saving": 0.1021,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0002",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan yang sangat jelas, dan melibatkan pemrosesan data terstruktur antara dua sumber yang berbeda untuk memastikan akurasi.",
+            "recommendation": "Implementasikan solusi otomasi menggunakan RPA atau integrasi langsung antara sistem perbankan dengan modul kas di ERP untuk pencocokan data secara otomatis.",
+            "group_id": "reconciliation",
+            "fte": 0.075,
+            "estimated_fte_saving": 0.0525,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0003",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan perhitungan yang pasti, dan menggunakan data terstruktur yang berasal dari sistem ERP, sehingga proses penyusunannya dapat diotomasi sepenuhnya.",
+            "recommendation": "Gunakan tools Business Intelligence atau fitur otomasi pada sistem ERP untuk menarik data dan menyusun format laporan laba rugi serta neraca secara otomatis.",
+            "group_id": "report_generation",
+            "fte": 0.1,
+            "estimated_fte_saving": 0.07,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0004",
+            "automation_level": "medium",
+            "reason": "Meskipun validasi kelengkapan dokumen dapat diotomasi, proses verifikasi kesesuaian klaim dengan kebijakan perusahaan sering kali memerlukan pertimbangan manusia terkait pengecualian atau konteks transaksi tertentu.",
+            "recommendation": "Implementasikan workflow approval digital yang terintegrasi dengan OCR untuk validasi dokumen otomatis, namun tetap menyertakan langkah verifikasi final oleh manusia untuk kasus-kasus yang tidak memenuhi aturan baku.",
+            "group_id": "document_review_approval",
+            "fte": 0.1,
+            "estimated_fte_saving": 0.04,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0005",
+            "automation_level": "low",
+            "reason": "Aktivitas ini memerlukan interaksi manusia, pertukaran ide, dan pengambilan keputusan kolaboratif yang tidak dapat digantikan oleh mesin.",
+            "recommendation": "Gunakan alat bantu seperti notulensi berbasis AI atau platform manajemen proyek untuk mendokumentasikan hasil rapat dan menindaklanjuti pembagian tugas secara digital.",
+            "group_id": "meeting_discussion",
+            "fte": 0.025,
+            "estimated_fte_saving": 0.0025,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0006",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin dan berulang dengan aturan input yang terdefinisi dengan jelas, sehingga tidak memerlukan penilaian atau intervensi manusia.",
+            "recommendation": "Implementasikan solusi OCR (Optical Character Recognition) untuk mengekstrak data dari faktur secara otomatis yang kemudian diintegrasikan langsung ke dalam modul ERP perusahaan.",
+            "group_id": "manual_data_entry",
+            "fte": 0.15,
+            "estimated_fte_saving": 0.105,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0007",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan yang sangat jelas, dan melibatkan pemrosesan data terstruktur antara dua sumber yang berbeda.",
+            "recommendation": "Gunakan perangkat lunak RPA atau sistem rekonsiliasi otomatis yang terintegrasi dengan data perbankan dan ERP untuk mencocokkan transaksi secara real-time.",
+            "group_id": "reconciliation",
+            "fte": 0.0938,
+            "estimated_fte_saving": 0.0657,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0008",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan perhitungan yang pasti, dan menggunakan data terstruktur yang berasal langsung dari sistem ERP sehingga sangat sesuai untuk diotomasi.",
+            "recommendation": "Gunakan fitur otomasi laporan pada dashboard ERP atau implementasikan alat bantu Business Intelligence (BI) untuk menghasilkan laporan aging secara otomatis dan berkala tanpa perlu pengolahan manual di Excel.",
+            "group_id": "report_generation",
+            "fte": 0.05,
+            "estimated_fte_saving": 0.035,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0009",
+            "automation_level": "high",
+            "reason": "Proses ini bersifat rutin, berbasis aturan yang jelas berdasarkan tanggal jatuh tempo, dan menggunakan format komunikasi terstruktur.",
+            "recommendation": "Gunakan sistem pengiriman email otomatis (automated email workflow) yang terintegrasi langsung dengan database piutang untuk mengirim pengingat secara terjadwal.",
+            "group_id": "customer_communication",
+            "fte": 0.1042,
+            "estimated_fte_saving": 0.0729,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0010",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan penamaan yang konsisten, dan dapat dilakukan secara otomatis tanpa memerlukan penilaian subjektif manusia.",
+            "recommendation": "Implementasikan solusi Intelligent Document Processing (IDP) untuk memindai, mengenali nomor transaksi secara otomatis, dan mengarsipkannya ke direktori yang sesuai.",
+            "group_id": "filing_archiving",
+            "fte": 0.0938,
+            "estimated_fte_saving": 0.0657,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0011",
+            "automation_level": "medium",
+            "reason": "Aktivitas ini melibatkan verifikasi dokumen pendukung untuk memastikan kesesuaian sebelum persetujuan, sehingga masih membutuhkan penilaian manusia untuk menangani pengecualian atau ketidaksesuaian data.",
+            "recommendation": "Gunakan sistem workflow approval digital yang dilengkapi dengan fitur validasi dokumen otomatis dan pencocokan data (three-way matching) untuk mempermudah verifikasi sebelum keputusan akhir dibuat.",
+            "group_id": "document_review_approval",
+            "fte": 0.1,
+            "estimated_fte_saving": 0.04,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0012",
+            "automation_level": "medium",
+            "reason": "Meskipun perhitungan selisih dapat dilakukan secara otomatis, penyusunan penjelasan bagi manajemen memerlukan interpretasi kontekstual, pemahaman terhadap dinamika operasional, dan penilaian kualitatif manusia.",
+            "recommendation": "Gunakan dashboard business intelligence untuk otomatisasi pelaporan variance secara real-time dan gunakan alat bantu analitik untuk menyoroti area yang memerlukan penjelasan manual lebih lanjut.",
+            "group_id": "analysis_evaluation",
+            "fte": 0.05,
+            "estimated_fte_saving": 0.02,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0013",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin dan berbasis aturan yang jelas dengan menggunakan data terstruktur langsung dari sistem ERP.",
+            "recommendation": "Gunakan teknologi RPA untuk melakukan ekstraksi data otomatis dari ERP dan integrasi ke dalam sistem e-Faktur untuk meminimalisir input manual.",
+            "group_id": "report_generation",
+            "fte": 0.0625,
+            "estimated_fte_saving": 0.0438,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0014",
+            "automation_level": "low",
+            "reason": "Negosiasi termin pembayaran merupakan proses strategis yang melibatkan komunikasi interpersonal, pemahaman situasi vendor, dan pengambilan keputusan berbasis hubungan bisnis yang tidak dapat diotomasi sepenuhnya.",
+            "recommendation": "Gunakan alat bantu berupa sistem analitik data historis pembayaran dan dashboard performa vendor untuk memberikan landasan argumen berbasis data bagi staf saat melakukan negosiasi.",
+            "group_id": "negotiation_relationship",
+            "fte": 0.025,
+            "estimated_fte_saving": 0.0025,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0015",
+            "automation_level": "low",
+            "reason": "Aktivitas coaching memerlukan pendekatan personal, empati, serta kemampuan untuk menyesuaikan penjelasan berdasarkan kebutuhan unik staf baru. Hal ini tidak dapat digantikan oleh sistem karena bersifat interaktif dan situasional.",
+            "recommendation": "Gunakan platform manajemen pembelajaran (LMS) atau repositori basis pengetahuan untuk menyimpan materi panduan dan kebijakan sebagai pendukung agar sesi coaching lebih efisien.",
+            "group_id": "coaching_training",
+            "fte": 0.05,
+            "estimated_fte_saving": 0.005,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0016",
+            "automation_level": "high",
+            "reason": "Aktivitas memindahkan data absensi dari file Excel ke HRIS merupakan tugas administratif rutin yang bersifat repetitif dan mengikuti aturan input yang sudah baku.",
+            "recommendation": "Gunakan teknologi Robotic Process Automation (RPA) untuk membaca file Excel absensi secara otomatis dan melakukan input data langsung ke dalam sistem HRIS.",
+            "group_id": "manual_data_entry",
+            "fte": 0.125,
+            "estimated_fte_saving": 0.0875,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0017",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin dan berbasis aturan yang jelas dalam memvalidasi data terstruktur dari sistem absensi dan payroll untuk memastikan akurasi perhitungan.",
+            "recommendation": "Implementasikan sistem integrasi data otomatis antara modul absensi dan sistem payroll atau gunakan bot RPA untuk mencocokkan data secara otomatis dan menandai selisih yang ditemukan.",
+            "group_id": "reconciliation",
+            "fte": 0.075,
+            "estimated_fte_saving": 0.0525,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0018",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan yang baku, dan menggunakan data terstruktur dari sistem HRIS atau Excel, sehingga proses ekstraksi dan penyusunan laporan dapat sepenuhnya diotomasi.",
+            "recommendation": "Gunakan dashboard otomatis atau alat business intelligence (BI) yang terhubung langsung ke sumber data untuk menghasilkan laporan secara real-time tanpa pengolahan manual.",
+            "group_id": "report_generation",
+            "fte": 0.025,
+            "estimated_fte_saving": 0.0175,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0019",
+            "automation_level": "high",
+            "reason": "Pengecekan saldo cuti dan persetujuan pengajuan merupakan proses berbasis aturan yang kaku dan sudah terstandarisasi dalam sistem HRIS.",
+            "recommendation": "Implementasikan sistem alur kerja otomatis (workflow approval) yang secara otomatis akan menyetujui pengajuan jika saldo cuti mencukupi atau menolak jika saldo tidak tersedia.",
+            "group_id": "document_review_approval",
+            "fte": 0.0417,
+            "estimated_fte_saving": 0.0292,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0020",
+            "automation_level": "medium",
+            "reason": "Meskipun pertanyaan seputar kebijakan HR bersifat berulang, respons terkadang membutuhkan konteks spesifik dari situasi karyawan yang memerlukan verifikasi manusia.",
+            "recommendation": "Implementasikan chatbot berbasis FAQ atau sistem tiket berbasis basis pengetahuan yang terintegrasi dengan portal HR untuk menjawab pertanyaan rutin secara otomatis.",
+            "group_id": "customer_communication",
+            "fte": 0.125,
+            "estimated_fte_saving": 0.05,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0021",
+            "automation_level": "medium",
+            "reason": "Screening CV melibatkan pencocokan kualifikasi yang bersifat rutin dan berbasis aturan, namun tetap memerlukan penilaian kualitatif untuk mengontekstualisasikan pengalaman kandidat.",
+            "recommendation": "Gunakan sistem Applicant Tracking System (ATS) dengan fitur parsing CV otomatis untuk menyaring kualifikasi dasar, sementara seleksi akhir tetap dilakukan oleh rekruter.",
+            "group_id": "analysis_evaluation",
+            "fte": 0.1667,
+            "estimated_fte_saving": 0.0667,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0022",
+            "automation_level": "medium",
+            "reason": "Penjadwalan interview melibatkan koordinasi ketersediaan waktu antar pihak yang dinamis dan perlu penyesuaian jika terjadi kendala pada salah satu pihak.",
+            "recommendation": "Implementasikan sistem self-service booking berbasis kalender terintegrasi yang memungkinkan kandidat memilih slot waktu tersedia secara mandiri.",
+            "group_id": "scheduling_coordination",
+            "fte": 0.125,
+            "estimated_fte_saving": 0.05,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0023",
+            "automation_level": "low",
+            "reason": "Wawancara kandidat memerlukan empati, penilaian subjektif terhadap kecocokan budaya, dan observasi interaksi manusia yang tidak dapat digantikan oleh sistem. Proses ini bersifat kualitatif dan menuntut intuisi profesional dalam pengambilan keputusan.",
+            "recommendation": "Gunakan sistem manajemen rekrutmen atau platform penilaian psikometrik sebagai alat bantu untuk mempermudah pendokumentasian hasil wawancara dan analisis data kandidat sebelum keputusan akhir diambil oleh user.",
+            "group_id": "analysis_evaluation",
+            "fte": 0.15,
+            "estimated_fte_saving": 0.015,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0024",
+            "automation_level": "high",
+            "reason": "Aktivitas memasukkan data kandidat ke sistem HRIS merupakan tugas administratif yang berulang dengan input dan output yang sangat terstruktur.",
+            "recommendation": "Implementasikan solusi RPA atau integrasi sistem perekrutan langsung ke HRIS untuk memindahkan data kandidat secara otomatis tanpa entri manual.",
+            "group_id": "manual_data_entry",
+            "fte": 0.0417,
+            "estimated_fte_saving": 0.0292,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0025",
+            "automation_level": "low",
+            "reason": "Rapat ini melibatkan diskusi strategis, penyelesaian masalah karyawan yang kompleks, dan koordinasi tim yang membutuhkan interaksi manusia serta empati.",
+            "recommendation": "Gunakan alat bantu manajemen rapat atau dashboard kolaborasi untuk memfasilitasi pencatatan poin diskusi dan pelacakan tindak lanjut secara lebih terstruktur.",
+            "group_id": "meeting_discussion",
+            "fte": 0.025,
+            "estimated_fte_saving": 0.0025,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0026",
+            "automation_level": "high",
+            "reason": "Aktivitas merekap daftar hadir dari dokumen fisik ke Excel merupakan tugas rutin yang bersifat administratif dan berbasis aturan yang jelas.",
+            "recommendation": "Implementasikan solusi OCR (Optical Character Recognition) untuk memindai dokumen fisik dan integrasikan dengan sistem database atau Excel secara otomatis melalui alat RPA.",
+            "group_id": "manual_data_entry",
+            "fte": 0.0375,
+            "estimated_fte_saving": 0.0263,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0027",
+            "automation_level": "medium",
+            "reason": "Meskipun pengolahan data kuesioner bersifat rutin, penyusunan laporan ringkas untuk manajemen sering memerlukan sintesis temuan kualitatif dan interpretasi subjektif dari komentar peserta pelatihan.",
+            "recommendation": "Gunakan tools survei digital dengan fitur dashboard analitik otomatis untuk memproses data angka, sementara rangkuman naratif tetap dibuat dengan bantuan template laporan standar atau AI untuk mempercepat penulisan.",
+            "group_id": "report_generation",
+            "fte": 0.0375,
+            "estimated_fte_saving": 0.015,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0028",
+            "automation_level": "low",
+            "reason": "Menyusun materi pelatihan memerlukan kreativitas, pemahaman konteks bisnis, dan penyesuaian materi agar relevan dengan kebutuhan kompetensi spesifik, yang merupakan tugas kognitif manusia.",
+            "recommendation": "Gunakan alat bantu seperti platform pembuat konten berbasis AI atau template terstandarisasi untuk mempercepat proses desain visual dan struktur materi, agar karyawan dapat lebih fokus pada substansi dan kualitas kurikulum.",
+            "group_id": "coaching_training",
+            "fte": 0.1,
+            "estimated_fte_saving": 0.01,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0029",
+            "automation_level": "low",
+            "reason": "Aktivitas ini memerlukan interaksi sosial, empati, dan kemampuan adaptasi dalam memandu diskusi interaktif secara langsung.",
+            "recommendation": "Gunakan alat bantu seperti platform manajemen pembelajaran (LMS) atau alat kolaborasi digital untuk mendukung penyampaian materi dan pengelolaan kehadiran peserta.",
+            "group_id": "coaching_training",
+            "fte": 0.15,
+            "estimated_fte_saving": 0.015,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0030",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan pengkategorian yang jelas menggunakan NIK, dan tidak memerlukan penilaian subjektif manusia.",
+            "recommendation": "Gunakan teknologi OCR untuk membaca dokumen secara otomatis dan integrasikan dengan sistem manajemen dokumen (DMS) untuk pengarsipan berbasis NIK secara langsung.",
+            "group_id": "filing_archiving",
+            "fte": 0.0667,
+            "estimated_fte_saving": 0.0467,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0031",
+            "automation_level": "high",
+            "reason": "Aktivitas input data dari surat jalan ke sistem merupakan proses rutin yang berulang dan berbasis aturan yang jelas sehingga dapat dilakukan secara otomatis.",
+            "recommendation": "Implementasikan solusi OCR untuk membaca surat jalan secara otomatis, diikuti dengan integrasi data hasil scan langsung ke dalam sistem inventory melalui RPA atau API.",
+            "group_id": "manual_data_entry",
+            "fte": 0.1667,
+            "estimated_fte_saving": 0.1167,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0032",
+            "automation_level": "medium",
+            "reason": "Meskipun proses rekonsiliasi bersifat rutin, aktivitas stock opname memerlukan verifikasi fisik di lapangan dan penanganan ketidaksesuaian barang yang mungkin memerlukan pengecekan kondisi fisik atau investigasi penyebab selisih.",
+            "recommendation": "Gunakan sistem barcode scanner atau RFID yang terintegrasi langsung dengan ERP untuk meminimalkan human error saat input data fisik, serta sistem workflow otomatis untuk menindaklanjuti selisih stok.",
+            "group_id": "reconciliation",
+            "fte": 0.1,
+            "estimated_fte_saving": 0.04,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0033",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan yang baku, dan melibatkan pemrosesan data terstruktur dari sistem inventory.",
+            "recommendation": "Implementasikan laporan otomatis menggunakan dashboard real-time atau skrip otomatisasi yang menarik data langsung dari sistem ke format laporan yang diinginkan.",
+            "group_id": "report_generation",
+            "fte": 0.0375,
+            "estimated_fte_saving": 0.0263,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0034",
+            "automation_level": "medium",
+            "reason": "Aktivitas ini melibatkan komunikasi dua arah dan negosiasi jadwal yang dinamis dengan pihak eksternal, sehingga tidak sepenuhnya bisa diotomasi tanpa campur tangan manusia.",
+            "recommendation": "Gunakan platform vendor portal atau sistem manajemen transportasi (TMS) yang terintegrasi untuk pertukaran data otomatis, namun tetap sediakan kanal komunikasi untuk konfirmasi pengecualian.",
+            "group_id": "scheduling_coordination",
+            "fte": 0.1042,
+            "estimated_fte_saving": 0.0417,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0035",
+            "automation_level": "low",
+            "reason": "Briefing harian memerlukan interaksi langsung untuk membangun motivasi tim dan koordinasi operasional yang memerlukan kehadiran fisik serta komunikasi verbal.",
+            "recommendation": "Gunakan dashboard monitoring berbasis digital untuk menampilkan data target dan pencapaian secara real-time guna mengefisiensikan durasi rapat koordinasi.",
+            "group_id": "meeting_discussion",
+            "fte": 0.0313,
+            "estimated_fte_saving": 0.0031,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0036",
+            "automation_level": "high",
+            "reason": "Input PO berdasarkan PR yang sudah disetujui adalah tugas administratif yang berulang dan berbasis aturan standar tanpa memerlukan pertimbangan subjektif.",
+            "recommendation": "Gunakan teknologi RPA atau integrasi sistem API untuk menarik data dari purchase request secara langsung ke modul PO pada ERP untuk meminimalisir input manual.",
+            "group_id": "manual_data_entry",
+            "fte": 0.1667,
+            "estimated_fte_saving": 0.1167,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0037",
+            "automation_level": "medium",
+            "reason": "Aktivitas ini melibatkan perbandingan data terstruktur, namun pemilihan vendor terbaik masih memerlukan penilaian manusia terkait kredibilitas dan kualitas layanan. Otomasi dapat membantu proses pengumpulan dan tabulasi data secara otomatis, namun keputusan akhir tetap berada di tangan staf.",
+            "recommendation": "Implementasikan sistem e-procurement atau dashboard komparasi harga otomatis untuk mempermudah visualisasi data sebelum pengambilan keputusan.",
+            "group_id": "analysis_evaluation",
+            "fte": 0.0563,
+            "estimated_fte_saving": 0.0225,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0038",
+            "automation_level": "medium",
+            "reason": "Meskipun pemeriksaan anggaran dapat dilakukan secara sistematis, proses ini memerlukan penilaian manusia untuk memverifikasi kebutuhan operasional dan menangani pengecualian terkait stok atau prioritas pembelian.",
+            "recommendation": "Implementasikan sistem workflow approval digital yang terintegrasi dengan modul anggaran dan inventaris untuk validasi otomatis, namun tetap menyisakan ruang bagi manajer untuk memberikan persetujuan akhir.",
+            "group_id": "document_review_approval",
+            "fte": 0.0625,
+            "estimated_fte_saving": 0.025,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0039",
+            "automation_level": "low",
+            "reason": "Aktivitas ini memerlukan kemampuan negosiasi, penilaian subjektif terhadap penawaran, serta pembangunan hubungan interpersonal dengan vendor.",
+            "recommendation": "Gunakan perangkat lunak manajemen pengadaan (e-procurement) atau dashboard analitik harga pasar sebagai alat bantu pendukung pengambilan keputusan bagi staf dalam bernegosiasi.",
+            "group_id": "negotiation_relationship",
+            "fte": 0.05,
+            "estimated_fte_saving": 0.005,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0040",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan yang baku, dan datanya bersumber langsung dari sistem terstruktur.",
+            "recommendation": "Gunakan dashboard otomatis atau skrip pengolah data untuk menarik data dari ERP secara langsung agar laporan dihasilkan secara real-time tanpa penginputan manual.",
+            "group_id": "report_generation",
+            "fte": 0.0313,
+            "estimated_fte_saving": 0.0219,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0041",
+            "automation_level": "high",
+            "reason": "Pencatatan hasil inspeksi dari dokumen fisik ke spreadsheet merupakan tugas administratif yang berulang dan mengikuti pola data yang terstruktur.",
+            "recommendation": "Gunakan aplikasi mobile untuk inspeksi lapangan (e-form) atau implementasikan teknologi OCR untuk mengubah data dari formulir kertas ke format digital secara otomatis.",
+            "group_id": "manual_data_entry",
+            "fte": 0.1042,
+            "estimated_fte_saving": 0.0729,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0042",
+            "automation_level": "medium",
+            "reason": "Penjadwalan memiliki aturan baku namun memerlukan koordinasi dan penanganan ketersediaan sumber daya manusia serta mesin yang dinamis.",
+            "recommendation": "Gunakan sistem manajemen pemeliharaan terintegrasi (CMMS) atau aplikasi penjadwalan otomatis yang dapat mengirimkan notifikasi langsung ke kalender tim produksi.",
+            "group_id": "scheduling_coordination",
+            "fte": 0.025,
+            "estimated_fte_saving": 0.01,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0043",
+            "automation_level": "low",
+            "reason": "Investigasi akar masalah memerlukan pemikiran kritis, kemampuan problem solving, dan kolaborasi tim untuk memahami konteks teknis yang unik pada setiap cacat produk. Aktivitas ini bersifat kualitatif dan menuntut penilaian profesional manusia, bukan sekadar pemrosesan data berbasis aturan.",
+            "recommendation": "Gunakan alat bantu seperti sistem manajemen pengetahuan atau database riwayat defect untuk mempermudah tim melakukan analisis, namun tetap pertahankan keterlibatan ahli manusia dalam pengambilan keputusan.",
+            "group_id": "analysis_evaluation",
+            "fte": 0.075,
+            "estimated_fte_saving": 0.0075,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0044",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan perhitungan yang jelas, dan menggunakan data terstruktur yang dapat diambil langsung dari sistem sumber.",
+            "recommendation": "Implementasikan otomasi pembuatan laporan melalui dashboard Business Intelligence atau penggunaan skrip RPA untuk mengekstrak data dan menyusun format laporan secara otomatis.",
+            "group_id": "report_generation",
+            "fte": 0.05,
+            "estimated_fte_saving": 0.035,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0045",
+            "automation_level": "low",
+            "reason": "Aktivitas rapat koordinasi memerlukan diskusi langsung, penyelesaian kendala secara kolaboratif, dan pengambilan keputusan yang dinamis, sehingga tidak dapat sepenuhnya diotomasi.",
+            "recommendation": "Gunakan alat bantu manajemen proyek seperti dashboard visual real-time untuk memantau progres produksi, sehingga waktu rapat dapat difokuskan pada pengambilan keputusan strategis daripada sekadar pembaruan data.",
+            "group_id": "meeting_discussion",
+            "fte": 0.0625,
+            "estimated_fte_saving": 0.0063,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0046",
+            "automation_level": "high",
+            "reason": "Aktivitas input data dari email dan WhatsApp merupakan tugas rutin yang berulang dengan format data yang dapat distandarisasi ke dalam sistem.",
+            "recommendation": "Gunakan teknologi RPA (Robotic Process Automation) yang dilengkapi dengan Optical Character Recognition (OCR) atau alat ekstraksi data untuk membaca pesan dan menginputnya secara otomatis ke sistem sales order.",
+            "group_id": "manual_data_entry",
+            "fte": 0.1875,
+            "estimated_fte_saving": 0.1312,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0047",
+            "automation_level": "high",
+            "reason": "Aktivitas ini melibatkan ekstraksi dan pengolahan data terstruktur secara rutin berdasarkan aturan perhitungan yang baku tanpa memerlukan penilaian subjektif.",
+            "recommendation": "Gunakan dashboard otomatis atau alat Business Intelligence untuk menyajikan laporan secara real-time yang dapat diunduh langsung dari sistem.",
+            "group_id": "report_generation",
+            "fte": 0.05,
+            "estimated_fte_saving": 0.035,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0048",
+            "automation_level": "medium",
+            "reason": "Menjawab pertanyaan mengenai harga dan stok dapat dipetakan ke dalam aturan baku, namun tetap membutuhkan penyesuaian konten agar sesuai dengan konteks spesifik pertanyaan pelanggan.",
+            "recommendation": "Gunakan chatbot berbasis AI atau sistem FAQ otomatis yang terintegrasi dengan database stok dan harga untuk memberikan draf jawaban cepat yang dapat diverifikasi oleh staf sebelum dikirim.",
+            "group_id": "customer_communication",
+            "fte": 0.1563,
+            "estimated_fte_saving": 0.0625,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0049",
+            "automation_level": "high",
+            "reason": "Aktivitas ini melibatkan pencocokan data terstruktur dari sistem pembayaran dan invoice berdasarkan aturan yang jelas, mirip dengan proses rekonsiliasi data keuangan lainnya.",
+            "recommendation": "Implementasikan solusi RPA atau integrasi API antara sistem perbankan dengan modul accounting untuk melakukan pencocokan otomatis dan penandaan status pembayaran pada invoice.",
+            "group_id": "reconciliation",
+            "fte": 0.0833,
+            "estimated_fte_saving": 0.0583,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0050",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan yang jelas dalam pengkategorian, dan tidak memerlukan penilaian subjektif manusia.",
+            "recommendation": "Gunakan solusi RPA atau sistem manajemen dokumen (DMS) yang dilengkapi dengan fitur pengenalan karakter optis (OCR) untuk klasifikasi dan penyimpanan otomatis berdasarkan metadata dokumen.",
+            "group_id": "filing_archiving",
+            "fte": 0.0625,
+            "estimated_fte_saving": 0.0438,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0051",
+            "automation_level": "low",
+            "reason": "Aktivitas ini memerlukan interaksi manusia, persuasi, dan pemahaman mendalam atas kebutuhan klien yang bersifat unik dan subjektif.",
+            "recommendation": "Gunakan sistem CRM untuk mengelola riwayat interaksi dan alat bantu visualisasi presentasi agar staf dapat lebih fokus membangun hubungan dengan klien.",
+            "group_id": "negotiation_relationship",
+            "fte": 0.2,
+            "estimated_fte_saving": 0.02,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0052",
+            "automation_level": "low",
+            "reason": "Negosiasi kontrak dengan klien bersifat kompleks karena melibatkan persuasi, pertimbangan nilai strategis, dan pengambilan keputusan yang didasarkan pada hubungan interpersonal.",
+            "recommendation": "Gunakan perangkat lunak manajemen hubungan pelanggan (CRM) atau alat bantu analitik data pasar untuk menyajikan data pendukung yang memperkuat posisi tawar saat bernegosiasi.",
+            "group_id": "negotiation_relationship",
+            "fte": 0.075,
+            "estimated_fte_saving": 0.0075,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0053",
+            "automation_level": "low",
+            "reason": "Aktivitas ini memerlukan empati, kemampuan negosiasi, dan kemampuan membaca situasi pelanggan secara langsung untuk memastikan konversi penjualan yang efektif.",
+            "recommendation": "Gunakan alat bantu seperti CRM untuk pengingat jadwal tindak lanjut dan penyediaan template pesan yang terpersonalisasi guna membantu staf mengelola komunikasi dengan lebih efisien.",
+            "group_id": "customer_communication",
+            "fte": 0.125,
+            "estimated_fte_saving": 0.0125,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0054",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan perhitungan harga yang baku, serta menggunakan input data yang terstruktur, sehingga proses pembuatan dokumen dapat dilakukan secara otomatis.",
+            "recommendation": "Implementasikan solusi otomasi dokumen atau sistem CRM yang mampu menarik daftar harga dan diskon secara otomatis untuk menghasilkan dokumen quotation dalam format standar.",
+            "group_id": "report_generation",
+            "fte": 0.125,
+            "estimated_fte_saving": 0.0875,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0055",
+            "automation_level": "high",
+            "reason": "Input data prospek dan nilai deal ke CRM merupakan aktivitas rutin yang berbasis aturan dan memiliki struktur data yang jelas.",
+            "recommendation": "Gunakan RPA atau API connector untuk melakukan sinkronisasi data secara otomatis dari sumber data ke sistem CRM guna menghilangkan entri manual.",
+            "group_id": "manual_data_entry",
+            "fte": 0.0625,
+            "estimated_fte_saving": 0.0438,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0056",
+            "automation_level": "high",
+            "reason": "Aktivitas ini bersifat rutin, berbasis aturan yang baku, dan menggunakan data terstruktur untuk menyusun laporan, serupa dengan proses rekap data lainnya yang telah diotomasi.",
+            "recommendation": "Implementasikan dashboard otomatis yang terhubung langsung ke sistem database penjualan untuk menghasilkan laporan secara real-time tanpa perlu kompilasi manual.",
+            "group_id": "report_generation",
+            "fte": 0.0375,
+            "estimated_fte_saving": 0.0263,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0057",
+            "automation_level": "medium",
+            "reason": "Pemberian diskon khusus memerlukan penilaian manajerial untuk mempertimbangkan strategi bisnis, profitabilitas, dan relasi pelanggan yang tidak bisa sepenuhnya didasarkan pada aturan kaku.",
+            "recommendation": "Implementasikan sistem workflow approval digital yang menyediakan dashboard perbandingan margin laba agar manajer dapat mengambil keputusan dengan cepat.",
+            "group_id": "document_review_approval",
+            "fte": 0.0667,
+            "estimated_fte_saving": 0.0267,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0058",
+            "automation_level": "low",
+            "reason": "Aktivitas ini melibatkan diskusi strategis, analisis hambatan penjualan, dan koordinasi tim yang membutuhkan interaksi manusia, pertukaran ide, serta penilaian profesional.",
+            "recommendation": "Gunakan alat bantu seperti sistem manajemen proyek atau dashboard visualisasi data untuk mendukung diskusi agar lebih efektif dan berbasis fakta.",
+            "group_id": "meeting_discussion",
+            "fte": 0.0375,
+            "estimated_fte_saving": 0.0038,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0059",
+            "automation_level": "medium",
+            "reason": "Menangani komplain memerlukan empati dan penilaian kontekstual untuk mencari solusi yang tepat, meskipun banyak aspek penanganan dapat dibantu dengan panduan aturan atau database FAQ.",
+            "recommendation": "Implementasikan chatbot berbasis AI untuk screening awal dan penyediaan solusi mandiri untuk keluhan umum, namun sediakan jalur eskalasi ke staf manusia untuk masalah yang kompleks.",
+            "group_id": "customer_communication",
+            "fte": 0.125,
+            "estimated_fte_saving": 0.05,
+            "status": "success"
+        },
+        {
+            "activity_id": "ACT-0060",
+            "automation_level": "low",
+            "reason": "Aktivitas coaching tim sales sangat bergantung pada interaksi interpersonal, empati, dan penilaian situasional terhadap performa individu yang tidak dapat digantikan oleh teknologi.",
+            "recommendation": "Gunakan platform learning management system (LMS) atau alat bantu analitik performa sebagai pendukung materi diskusi agar pembimbing dapat memberikan feedback berbasis data yang lebih objektif.",
+            "group_id": "coaching_training",
+            "fte": 0.075,
+            "estimated_fte_saving": 0.0075,
+            "status": "success"
+        }
+    ]
+}
